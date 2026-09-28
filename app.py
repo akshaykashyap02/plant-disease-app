@@ -21,7 +21,7 @@ uploaded = st.file_uploader("Choose a leaf image", type=['jpg', 'jpeg', 'png'])
 
 if uploaded:
     image = Image.open(uploaded).convert('RGB')
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+    st.image(image, caption='Uploaded Image', use_container_width=True)
 
     # Preprocess — NO /255 (EfficientNet handles it internally!)
     img = image.resize((224, 224))
